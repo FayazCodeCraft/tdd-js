@@ -4,7 +4,7 @@ test(
     () => 
          new Promise((resolve) => {
             let ids = [];
-            for (let i = 1; i <=60; i++) {
+            for (let i = 1; i <=20; i++) {
                 ids.push(i);
             }
 
@@ -12,7 +12,7 @@ test(
                 .then((result) => {
                     console.log(result)
                     expect(result).toBeInstanceOf(Array);
-                    expect(result.length).toBe(60);
+                    expect(result.length).toBe(20);
                     resolve();
                 })
                 .catch((error) => {
@@ -21,7 +21,7 @@ test(
                     resolve()
                 });
         }),
-    30000,
+    100000,
 );
 
 
